@@ -96,13 +96,37 @@ a:focus {
     background: #fdbe33;
 } 
 
-.top-bar .logo {
+.top-bar .logo{
     display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.top-bar .logo img{
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.top-bar .logo h1 {
+    flex-grow: 1;
+    margin: 12px;
+    color: #030f27;
+    font-size: 50px;
+    line-height: 60px;
+    font-weight: 700;
+    align-items: center;
+}
+
+
+/* .top-bar .logo {
+    display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 15px 0;
+    padding: 30px 0;
 }
 
 .top-bar .logo img {
@@ -118,7 +142,7 @@ a:focus {
     font-size: 60px;
     line-height: 60px;
     font-weight: 700;
-}
+} */
 
 
 
@@ -179,15 +203,45 @@ a:focus {
     font-weight: 400;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1008px) {
     .top-bar {
         padding: 0 60px;
     }
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 1008px) {
     .top-bar .logo {
         text-align: center;
+    }
+
+    .top-bar .logo h1{
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 415px){
+    .top-bar{
+        height: 70px;
+    }
+    
+    .top-bar .logo img{
+        width: 60px;
+    }
+    .top-bar .logo h1{
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 287px){
+    .top-bar{
+        height: 60px;
+        padding-bottom: 30px;
+    }
+    .top-bar .logo img{
+        width: 50px;
+    }
+    .top-bar .logo h1{
+        font-size: 25px;
     }
 }
 
