@@ -304,39 +304,6 @@ a:focus {
   vertical-align: center;
 }
 
-.trusted {
-  background-color: #f7f7f7;
-  padding: 40px 0;
-}
-
-.trusted .title {
-  text-align: center;
-  font-size: 18px;
-  margin-bottom: 40px;
-}
-
-.trusted__images {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
-  text-align: center;
-}
-
-@media (max-width: 991px) {
-  .trusted__images {
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: 25px;
-  }
-}
-@media (max-width: 768px) {
-  .trusted__images {
-    grid-template-columns: repeat(1, 1fr);
-    row-gap: 25px;
-  }
-  .trusted .title {
-    font-size: 16px;
-  }
-}
 /*******************************/
 /******** Carousel CSS *********/
 /*******************************/
@@ -1887,21 +1854,6 @@ tr:nth-child(2) {
   color: #fdbe33;
 }
 
-.portfolio .load-more {
-  text-align: center;
-}
-
-.portfolio .load-more .btn {
-  padding: 15px 35px;
-  font-size: 16px;
-  transition: 0.3s;
-}
-
-.portfolio .load-more .btn:hover {
-  color: #fdbe33;
-  background: #030f27;
-}
-
 .portfolio .portfolio-warp {
   position: relative;
   width: 100%;
@@ -1970,25 +1922,38 @@ tr:nth-child(2) {
   text-overflow: ellipsis;
 }
 
-.portfolio .portfolio-warp a.btn {
-  width: 60px;
-  height: 60px;
-  padding: 3px 0 0 3px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 60px;
-  line-height: 60px;
-  font-weight: 100;
-  color: #030f27;
-  background: #ffffff;
-  border-radius: 0;
-  transition: 0.3s;
+ul.timeline {
+  list-style-type: none;
+  position: relative;
 }
 
-.portfolio .portfolio-warp:hover a.btn {
-  color: #ffffff;
-  background: #fdbe33;
+ul.timeline:before {
+  content: " ";
+  background: #d4d9df;
+  display: inline-block;
+  position: absolute;
+  left: 29px;
+  width: 2px;
+  height: 100%;
+  z-index: 400;
+}
+
+ul.timeline > li {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+
+ul.timeline > li:before {
+  content: " ";
+  background: white;
+  display: inline-block;
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid #22c0e8;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  z-index: 400;
 }
 
 /*******************************/
