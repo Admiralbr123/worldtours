@@ -1,4 +1,4 @@
-/*******************************/
+    /*******************************/
 /********* General CSS *********/
 /*******************************/
 
@@ -397,7 +397,7 @@ a:focus {
     color: #ffffff;
     font-size: 60px;
     font-weight: 700;
-    margin-bottom: 35px;
+    margin-bottom: 15px;
 }
 
 .carousel .carousel-caption .btn {
@@ -1007,6 +1007,110 @@ a:focus {
     opacity: 1;
 }
 
+
+/*******************************/
+/*********** hajj **********/
+/*******************************/
+
+
+.hajj .pane {
+    background: #030f27;
+    margin:0;    
+}
+
+
+
+.hajj .card, 
+.hajj .card h4,
+.hajj .card p {
+    margin-bottom: 0rem;
+    padding: 0 1rem;
+    color:#fdbe33;
+    background: #030f27;
+}
+
+
+
+.hajj .card h5 {
+    margin: 0.3rem 0;
+    padding: 0 1rem;
+    color:#030f27;
+    background: #fdbe33;
+    font-size: 22px;
+}
+
+.hajj .card.first {
+    margin-top: 1rem;
+}
+
+
+.hajj .card.left-pane .text-wrapper,
+.card.right-pane .text-wrapper {
+    width: 73%;
+}
+
+
+
+.hajj .card-body {
+    padding: 1.5rem 0 1.5rem 0;
+}
+
+
+.hajj .card-title {
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+
+.hajj .card .card-icon {
+display: inline-block;
+width: 3.5rem;
+height: 3.5rem;
+border-radius: 50%;
+background-color: #fdbe33;
+text-align: center;
+vertical-align: top;
+}
+
+.hajj .left-pane .card-icon {
+    float: none;
+    margin-right: 0;
+    margin-left: 1rem;
+}
+
+.hajj .right-pane .card-icon {
+    float: none;
+    margin-right: 1rem;
+    margin-left: 0;
+}
+
+.hajj .card .card-icon .fas,
+.hajj .card .card-icon .far {
+color: #fff;
+font-size: 1.75rem;
+line-height: 3.5rem;
+}
+
+
+.hajj .card.left-pane .card-icon {
+float: right;
+margin-right: 1rem;
+}
+
+.hajj img {
+display: block;
+margin: 2rem auto 3rem auto;
+}
+
+.hajj .card.right-pane .text-wrapper {
+display: inline-block;
+width: 75%;
+}
+
+.hajj .card.right-pane .card-icon {
+margin-right: 1rem;
+}
 
 /*******************************/
 /*********** Team CSS **********/
@@ -1905,7 +2009,7 @@ table {
     margin: 5px;
     padding: 8px 15px;
     color: #030f27;
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 500;
     text-transform: uppercase;
     border-radius: 0;
@@ -1989,35 +2093,259 @@ table {
     text-overflow: ellipsis;
 }
 
-ul.timeline {
+
+/*******************************/
+/******** Timeline CSS ********/
+/*******************************/
+
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    /* width: 60vw; */
+    max-width: 100%;
+    margin: 5% 0 ;
+  
+    &__event {
+      background: #fff;
+      margin-bottom: 20px;
+      position: relative;
+      display: flex;
+      margin: 20px 0;
+      border-radius: 8px;
+      box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+        0 18px 36px -18px rgba(0, 0, 0, 0.3),
+        0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+  
+      &__title {
+        font-size: 1.4rem;
+        line-height: 1.4;
+        text-transform: uppercase;
+  
+        font-weight: 600;
+        color: #fdbe33;
+        letter-spacing: 1.5px;
+      }
+      &__content {
+        padding: 20px;
+      }
+      &__date {
+        color: #030f27;
+        font-size: 1.2rem;
+        font-weight: 600;
+        white-space: wrap;
+      }
+      &__icon {
+        border-radius: 4px 0 0 4px;
+        background: #fdbe33;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-basis: 40%;
+        font-size: 2rem;
+        color: #030f27;
+        padding: 2px;
+        z-index:2;
+  
+        i {
+          position: absolute;
+          top: 50%;
+          left:-67px;
+          font-size: 2.5rem;
+        transform: translateY(-50%);
+          
+        }
+      }
+      &__description {
+        flex-basis: 60%;
+      }
+  
+      &:after {
+        content: "";
+        width: 3px;
+        height: 145%;
+        background: #030f27;
+        position: absolute;
+        top: 52%;
+        // transform: translateY(-50%);
+        left: -2.8rem;
+        z-index: 0;
+        
+      
+      }
+  
+      &:before {
+        content: "";
+        width: 5rem;
+        height: 5rem;
+        position: absolute;
+        background: #fdbe33;
+        border-radius: 100%;
+        left: -5.2rem;
+        // right: 90%;
+        top: 50%;
+        transform: translateY(-50%);
+        border: 2px solid #030f27;
+        z-index:1
+      }
+      &--type2 {
+        &:before {
+          background: #030f27;
+          border-color: #fdbe33;
+        }
+        &:after{
+          background: #fdbe33;
+    
+        }
+        .timeline__event__date {
+          color: #fdbe33;
+        }
+  
+        .timeline__event__icon {
+          background: #030f27;
+          color: #fdbe33;
+        }
+        .timeline__event__title {
+          color: #030f27;
+        }
+        .timeline__event__title {
+        }
+      }
+      &--type3{
+        &:after{
+            width:0px;
+        }
+      }
+      
+    }
+  }
+  
+  @media (max-width: 786px) {
+    
+    .timeline{
+        margin: 5% 0 5% 20%;
+    }
+    
+    .timeline__event {
+      flex-direction: column;
+    }
+    .timeline__event__icon {
+      border-radius: 4px 4px 0 0;
+    }
+  }
+ 
+/*******************************/
+/******** Requirements CSS ********/
+/*******************************/ 
+
+
+.requirements ul{
     list-style-type: none;
+    margin: 0 0 10px 30px;
+    padding: 0;
+    line-height: 1.5;
+    text-align: left;
+  }
+  
+.requirements li:before {
+    content: "\f054";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #fdbe33;
+    display: inline-block;
+    margin-right: 10px;
+    width: 1.5em;
+  }
+.requirements li{
+    font-size: 23px;
+}
+
+/* .note{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.note .list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.head-icon{
+display: inline-block; 
+font-size: 40px; 
+color: #030f27;
+margin-bottom:0px;    
+}
+
+.icon-heading{
+display: inline-block;
+font-size: 37px;
+margin-top: 50px;
+margin-left: 15px;
+}
+/*******************************/
+/******** Price CSS ********/
+/*******************************/
+
+.price {
     position: relative;
+    margin-bottom: 45px;
 }
-ul.timeline:before {
-    content: ' ';
-    background: #d4d9df;
-    display: inline-block;
-    position: absolute;
-    left: 29px;
-    width: 2px;
-    height: 100%;
-    z-index: 400;
+
+.price .col-md-6 {
+    background: #030f27;
 }
-ul.timeline > li {
-    margin: 20px 0;
-    padding-left: 20px;
+    
+.price .col-md-6:nth-child(2n) {
+    color: #030f27;
+    background: #fdbe33;
+}    
+
+.price .price-item {
+    min-height: 200px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
-ul.timeline > li:before {
-    content: ' ';
-    background: white;
-    display: inline-block;
-    position: absolute;
-    border-radius: 50%;
-    border: 3px solid #22c0e8;
-    left: 20px;
-    width: 20px;
-    height: 20px;
-    z-index: 400;
+
+.price h3 {
+    margin: 0 0 3px 0;
+    color: #fdbe33;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.price h5 {
+    margin: 0 0 20px 0;
+    color: #fdbe33;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.price h4 {
+    margin: 0 0 17px 0;
+    color: #fdbe33;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.price p {
+    margin: 0;
+    color: #fdbe33;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.price .col-md-6:nth-child(2n) ::before,
+.price .col-md-6:nth-child(2n) h5,
+.price .col-md-6:nth-child(2n) h4,
+.price .col-md-6:nth-child(2n) h3,
+.price .col-md-6:nth-child(2n) p {
+    color: #030f27;
 }
 
 /*******************************/
