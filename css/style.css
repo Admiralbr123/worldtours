@@ -22,7 +22,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #030f27;
+  color: #003566;
 }
 
 a {
@@ -96,7 +96,7 @@ a:focus {
 }
 
 .top-bar .logo img {
-  width: 100px;
+  width: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -105,7 +105,7 @@ a:focus {
 .top-bar .logo h1 {
   flex-grow: 1;
   margin: 12px;
-  color: #030f27;
+  color: #003566;
   font-size: 50px;
   line-height: 60px;
   font-weight: 700;
@@ -127,7 +127,7 @@ a:focus {
 
 .top-bar .top-bar-icon [class^=flaticon-]::before {
   margin: 0;
-  color: #030f27;
+  color: #003566;
   font-size: 40px;
 }
 
@@ -137,14 +137,14 @@ a:focus {
 
 .top-bar .top-bar-text h3 {
   margin: 0 0 5px 0;
-  color: #030f27;
+  color: #003566;
   font-size: 16px;
   font-weight: 400;
 }
 
 .top-bar .top-bar-text p {
   margin: 0;
-  color: #030f27;
+  color: #003566;
   font-size: 13px;
   font-weight: 400;
 }
@@ -167,7 +167,7 @@ a:focus {
     height: 80px;
   }
   .top-bar .logo img {
-    width: 60px;
+    width: 50px;
   }
   .top-bar .logo h1 {
     font-size: 30px;
@@ -178,12 +178,26 @@ a:focus {
     height: 80px;
   }
   .top-bar .logo img {
-    width: 50px;
+    width: 40px;
   }
   .top-bar .logo h1 {
     font-size: 25px;
   }
 }
+/*pdf-grid*/
+a.yellow_btn {
+  position: relative;
+  margin-top: 15px;
+  padding: 15px 35px;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #003566;
+  border-radius: 0;
+  background: #fdbe33;
+  transition: 0.3s;
+}
+
 /**********************************/
 /*********** Nav Bar CSS **********/
 /**********************************/
@@ -208,7 +222,7 @@ a:focus {
 
 .nav-bar .navbar {
   height: 100%;
-  background: #030f27 !important;
+  background: #003566 !important;
 }
 
 .navbar-dark .navbar-nav .nav-link,
@@ -239,7 +253,7 @@ a:focus {
 }
 
 .nav-bar .btn:hover {
-  color: #030f27;
+  color: #003566;
   background: #fdbe33;
   border-color: #fdbe33;
 }
@@ -383,7 +397,7 @@ a:focus {
 }
 
 .carousel .carousel-caption .btn:hover {
-  color: #030f27;
+  color: #003566;
   background: #fdbe33;
   border-color: #fdbe33;
 }
@@ -535,6 +549,34 @@ a:focus {
     grid-gap: 1px;
   }
 }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 10px;
+}
+
+.gallery a {
+  display: block;
+  position: relative;
+  padding-bottom: 100%;
+  overflow: hidden;
+}
+
+.gallery img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 576px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+}
 /*******************************/
 /******* Page Header CSS *******/
 /*******************************/
@@ -548,7 +590,7 @@ a:focus {
 
 .page-header h2 {
   position: relative;
-  color: #030f27;
+  color: #003566;
   font-size: 60px;
   font-weight: 700;
   margin-bottom: 20px;
@@ -562,14 +604,14 @@ a:focus {
   height: 2px;
   left: calc(50% - 50px);
   bottom: 0;
-  background: #030f27;
+  background: #003566;
 }
 
 .page-header a {
   position: relative;
   padding: 0 12px;
   font-size: 22px;
-  color: #030f27;
+  color: #003566;
 }
 
 .page-header a:hover {
@@ -650,11 +692,11 @@ a:focus {
 }
 
 .feature .col-md-12 {
-  background: #030f27;
+  background: #003566;
 }
 
 .feature .col-md-12:nth-child(2n) {
-  color: #030f27;
+  color: #003566;
   background: #fdbe33;
 }
 
@@ -693,7 +735,7 @@ a:focus {
   height: 79px;
   top: -18px;
   left: -9px;
-  background: #030f27;
+  background: #003566;
   border-radius: 60px;
   z-index: 2;
 }
@@ -732,7 +774,20 @@ a:focus {
 .feature .col-md-12:nth-child(2n) [class^=flaticon-]::before,
 .feature .col-md-12:nth-child(2n) h3,
 .feature .col-md-12:nth-child(2n) p {
-  color: #030f27;
+  color: #003566;
+}
+
+/*******************************/
+/********** Mission Statement **********/
+/*******************************/
+.mission .txt::before {
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 50px;
+  top: 0;
+  left: calc(50% - 30px);
+  background: url(../img/quote.png) top center no-repeat;
 }
 
 /*******************************/
@@ -771,7 +826,7 @@ a:focus {
   font-size: 16px;
   font-weight: 500;
   letter-spacing: 1px;
-  color: #030f27;
+  color: #003566;
   border-radius: 0;
   background: #fdbe33;
   transition: 0.3s;
@@ -779,7 +834,7 @@ a:focus {
 
 .about .about-text a.btn:hover {
   color: #fdbe33;
-  background: #030f27;
+  background: #003566;
 }
 
 @media (max-width: 767.98px) {
@@ -821,7 +876,7 @@ a:focus {
 }
 
 .fact .fact-right .fact-icon [class^=flaticon-]::before {
-  background-image: linear-gradient(#ffffff, #030f27);
+  background-image: linear-gradient(#ffffff, #003566);
 }
 
 .fact .fact-left,
@@ -844,11 +899,11 @@ a:focus {
 
 .fact .fact-left {
   color: #fdbe33;
-  background: #030f27;
+  background: #003566;
 }
 
 .fact .fact-right {
-  color: #030f27;
+  color: #003566;
   background: #fdbe33;
 }
 
@@ -909,7 +964,7 @@ a:focus {
   display: flex;
   align-items: center;
   height: 60px;
-  background: #030f27;
+  background: #003566;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -938,7 +993,7 @@ a:focus {
   font-size: 60px;
   line-height: 60px;
   font-weight: 100;
-  color: #030f27;
+  color: #003566;
   background: #fdbe33;
   border-radius: 0;
   transition: 0.3s;
@@ -1027,7 +1082,7 @@ a:focus {
   z-index: 3;
   width: 0;
   height: 0;
-  border-left: 32px solid #030f27;
+  border-left: 32px solid #003566;
   border-top: 22px solid transparent;
   border-bottom: 22px solid transparent;
 }
@@ -1071,7 +1126,7 @@ a:focus {
 /*********** hajj **********/
 /*******************************/
 .hajj .pane {
-  background: #030f27;
+  background: #003566;
   margin: 0;
 }
 
@@ -1081,13 +1136,13 @@ a:focus {
   margin-bottom: 0rem;
   padding: 0 1rem;
   color: #fdbe33;
-  background: #030f27;
+  background: #003566;
 }
 
 .hajj .card h5 {
   margin: 0.3rem 0;
   padding: 0 1rem;
-  color: #030f27;
+  color: #003566;
   background: #fdbe33;
   font-size: 22px;
 }
@@ -1186,7 +1241,7 @@ a:focus {
   position: relative;
   padding: 25px 15px;
   text-align: center;
-  background: #030f27;
+  background: #003566;
   transition: 0.5s;
 }
 
@@ -1207,7 +1262,7 @@ a:focus {
 }
 
 .team .team-item:hover .team-text h2 {
-  color: #030f27;
+  color: #003566;
   letter-spacing: 1px;
 }
 
@@ -1345,7 +1400,7 @@ a:focus {
   font-family: "font Awesome 5 Free";
   content: "\f068";
   float: right;
-  color: #030f27;
+  color: #003566;
   font-size: 12px;
   font-weight: 900;
   transition: 0.5s;
@@ -1453,22 +1508,62 @@ a:focus {
 /*******************************/
 /*********** Table CSS **********/
 /*******************************/
-table {
-  font-family: arial, sans-serif;
+.quota table {
   border-collapse: collapse;
   width: 100%;
 }
 
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
+.quota td, tr {
+  border: 1px solid #cac8c8;
+  text-align: center;
+  padding: 0px;
+}
+
+.quota tr:nth-child(2) {
+  background-color: #fdc857;
+}
+
+th {
+  border: 2px solid #003566;
+  text-align: center;
   padding: 8px;
+  background-color: #003566;
+  color: #fff;
 }
 
-tr:nth-child(2) {
-  background-color: #f3ce7d;
+.comparison table {
+  border: 5px solid #003566;
+  border-collapse: collapse;
+  width: 100%;
 }
 
+.comparsion tr, td {
+  border: 2px solid #003566;
+  text-align: center;
+  padding: 8px;
+  color: #000000;
+}
+
+.comparison th {
+  border: 2px solid #003566;
+  text-align: center;
+  padding: 8px;
+  background-color: #fdbe33;
+  color: #000000;
+}
+
+.comparison h3 {
+  text-align: center;
+  font-size: 35px;
+  padding: 14px 0;
+  font-weight: 700;
+}
+
+@media (max-width: 444px) {
+  .comparison tr, td, th {
+    padding: 0px;
+  }
+}
 /*******************************/
 /*********** Blog CSS **********/
 /*******************************/
@@ -1498,7 +1593,7 @@ tr:nth-child(2) {
   display: flex;
   align-items: center;
   height: 60px;
-  background: #030f27;
+  background: #003566;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -1527,7 +1622,7 @@ tr:nth-child(2) {
   font-size: 60px;
   line-height: 60px;
   font-weight: 100;
-  color: #030f27;
+  color: #003566;
   background: #fdbe33;
   border-radius: 0;
   transition: 0.3s;
@@ -1579,7 +1674,7 @@ tr:nth-child(2) {
 }
 
 .blog .pagination .page-link {
-  color: #030f27;
+  color: #003566;
   border-radius: 0;
   border-color: #fdbe33;
 }
@@ -1587,7 +1682,7 @@ tr:nth-child(2) {
 .blog .pagination .page-link:hover,
 .blog .pagination .page-item.active .page-link {
   color: #fdbe33;
-  background: #030f27;
+  background: #003566;
 }
 
 .blog .pagination .disabled .page-link {
@@ -1630,7 +1725,7 @@ tr:nth-child(2) {
 
 .single .single-tags a:hover {
   color: #fdbe33;
-  background: #030f27;
+  background: #003566;
 }
 
 .single .single-bio {
@@ -1743,7 +1838,7 @@ tr:nth-child(2) {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #030f27;
+  color: #003566;
   background: #fdbe33;
   font-size: 16px;
   transition: 0.3s;
@@ -1752,7 +1847,7 @@ tr:nth-child(2) {
 .single .related-slider .owl-nav .owl-prev:hover,
 .single .related-slider .owl-nav .owl-next:hover {
   color: #fdbe33;
-  background: #030f27;
+  background: #003566;
 }
 
 .single .single-comment {
@@ -1809,7 +1904,7 @@ tr:nth-child(2) {
 .single .comment-text .btn {
   padding: 3px 10px;
   font-size: 14px;
-  color: #030f27;
+  color: #003566;
   background: #dddddd;
   border-radius: 0;
 }
@@ -1844,13 +1939,13 @@ tr:nth-child(2) {
 
 .single .comment-form .btn {
   padding: 15px 30px;
-  color: #030f27;
+  color: #003566;
   background: #fdbe33;
 }
 
 .single .comment-form .btn:hover {
   color: #fdbe33;
-  background: #030f27;
+  background: #003566;
 }
 
 /**********************************/
@@ -1918,7 +2013,7 @@ tr:nth-child(2) {
 }
 
 .sidebar .search-widget .btn:hover {
-  color: #030f27;
+  color: #003566;
 }
 
 .sidebar .sidebar-widget .recent-post {
@@ -1931,13 +2026,13 @@ tr:nth-child(2) {
 
 .sidebar .tab-post .nav.nav-pills .nav-link {
   color: #fdbe33;
-  background: #030f27;
+  background: #003566;
   border-radius: 0;
 }
 
 .sidebar .tab-post .nav.nav-pills .nav-link:hover,
 .sidebar .tab-post .nav.nav-pills .nav-link.active {
-  color: #030f27;
+  color: #003566;
   background: #fdbe33;
 }
 
@@ -2004,7 +2099,7 @@ tr:nth-child(2) {
 
 .single .tag-widget a:hover {
   color: #fdbe33;
-  background: #030f27;
+  background: #003566;
 }
 
 .sidebar .image-widget {
@@ -2044,7 +2139,7 @@ tr:nth-child(2) {
   display: inline-block;
   margin: 5px;
   padding: 8px 15px;
-  color: #030f27;
+  color: #003566;
   font-size: 20px;
   font-weight: 500;
   text-transform: uppercase;
@@ -2056,7 +2151,7 @@ tr:nth-child(2) {
 
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
-  background: #030f27;
+  background: #003566;
   color: #fdbe33;
 }
 
@@ -2109,7 +2204,7 @@ tr:nth-child(2) {
   display: flex;
   align-items: center;
   height: 60px;
-  background: #030f27;
+  background: #003566;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -2159,7 +2254,7 @@ tr:nth-child(2) {
   padding: 20px;
 }
 .timeline__event__date {
-  color: #030f27;
+  color: #003566;
   font-size: 1.2rem;
   font-weight: 600;
   white-space: wrap;
@@ -2172,7 +2267,7 @@ tr:nth-child(2) {
   justify-content: center;
   flex-basis: 40%;
   font-size: 2rem;
-  color: #030f27;
+  color: #003566;
   padding: 2px;
   z-index: 2;
 }
@@ -2190,7 +2285,7 @@ tr:nth-child(2) {
   content: "";
   width: 3px;
   height: 145%;
-  background: #030f27;
+  background: #003566;
   position: absolute;
   top: 52%;
   left: -2.8rem;
@@ -2206,11 +2301,11 @@ tr:nth-child(2) {
   left: -5.2rem;
   top: 50%;
   transform: translateY(-50%);
-  border: 2px solid #030f27;
+  border: 2px solid #003566;
   z-index: 1;
 }
 .timeline__event--type2:before {
-  background: #030f27;
+  background: #003566;
   border-color: #fdbe33;
 }
 .timeline__event--type2:after {
@@ -2220,11 +2315,11 @@ tr:nth-child(2) {
   color: #fdbe33;
 }
 .timeline__event--type2 .timeline__event__icon {
-  background: #030f27;
+  background: #003566;
   color: #fdbe33;
 }
 .timeline__event--type2 .timeline__event__title {
-  color: #030f27;
+  color: #003566;
 }
 .timeline__event--type3:after {
   width: 0px;
@@ -2266,6 +2361,24 @@ tr:nth-child(2) {
   font-size: 23px;
 }
 
+.requirements a.btn {
+  position: relative;
+  margin-top: 15px;
+  padding: 15px 35px;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #003566;
+  border-radius: 0;
+  background: #fdbe33;
+  transition: 0.3s;
+}
+
+.requirements a.btn:hover {
+  color: #fdbe33;
+  background: #003566;
+}
+
 /* .note{
     display: flex;
     justify-content: center;
@@ -2280,7 +2393,7 @@ tr:nth-child(2) {
 .head-icon {
   display: inline-block;
   font-size: 40px;
-  color: #030f27;
+  color: #003566;
   margin-bottom: 0px;
 }
 
@@ -2300,11 +2413,11 @@ tr:nth-child(2) {
 }
 
 .price .col-md-6 {
-  background: #030f27;
+  background: #003566;
 }
 
 .price .col-md-6:nth-child(2n) {
-  color: #030f27;
+  color: #003566;
   background: #fdbe33;
 }
 
@@ -2350,7 +2463,7 @@ tr:nth-child(2) {
 .price .col-md-6:nth-child(2n) h4,
 .price .col-md-6:nth-child(2n) h3,
 .price .col-md-6:nth-child(2n) p {
-  color: #030f27;
+  color: #003566;
 }
 
 /*******************************/
@@ -2368,7 +2481,7 @@ tr:nth-child(2) {
 }
 
 .contact .col-md-6:first-child {
-  background: #030f27;
+  background: #003566;
 }
 
 .contact .col-md-6:last-child {
@@ -2470,14 +2583,14 @@ tr:nth-child(2) {
   font-size: 16px;
   font-weight: 600;
   color: #fdbe33;
-  background: #030f27;
+  background: #003566;
   border: none;
   border-radius: 0;
   transition: 0.3s;
 }
 
 .contact .contact-form .btn:hover {
-  color: #030f27;
+  color: #003566;
   background: #ffffff;
 }
 
@@ -2494,7 +2607,7 @@ tr:nth-child(2) {
   position: relative;
   margin-top: 45px;
   padding-top: 90px;
-  background: #030f27;
+  background: #003566;
   color: #ffffff;
 }
 
@@ -2575,7 +2688,7 @@ tr:nth-child(2) {
 }
 
 .footer .footer-social a:hover i {
-  color: #030f27;
+  color: #003566;
 }
 
 .footer .newsletter .form {
@@ -2620,19 +2733,16 @@ tr:nth-child(2) {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.footer .footer-menu .f-menu a {
+.footer .footer-menu .f-menu p {
+  display: inline-block;
   color: #ffffff;
   font-size: 16px;
   margin-right: 15px;
   padding-right: 15px;
-  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-right: 1px solid #fdbe33;
 }
 
-.footer .footer-menu .f-menu a:hover {
-  color: #fdbe33;
-}
-
-.footer .footer-menu .f-menu a:last-child {
+.footer .footer-menu .f-menu p:last-child {
   margin-right: 0;
   padding-right: 0;
   border-right: none;

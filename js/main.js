@@ -134,6 +134,13 @@
 
         portfolioIsotope.isotope({filter: $(this).data('filter')});
     });
+    
+    //$(document).ready(function() {
+      //  $('.grid a').lightbox({
+        //  'resizeDuration': 200,
+        //  'wrapAround': true
+      //  });
+    //  });
       
     
 })(jQuery);
